@@ -13,8 +13,8 @@ let kControllerMap: [ ControllerKey: (classType: UIViewController.Type, title: S
     [
         ControllerKeys.splash.rawValue: (SplashViewController.self, ""),
         ControllerKeys.main.rawValue: (MainTabbarViewController.self, ""),
-//        ControllerKeys.stations.rawValue: (<#vc name#>.self, ""),
-//        ControllerKeys.faves.rawValue: (<#vc name#>.self, "")
+        ControllerKeys.stations.rawValue: (StationsViewController.self, "Stations"),
+        ControllerKeys.faves.rawValue: (FavesViewController.self, "Favorites")
     ]
 
 enum ControllerKeys: ControllerKey {
@@ -34,5 +34,5 @@ var kControllerTreeKeys: [ControllerKey] {
 }
 
 var kControllerTreeCenterItem: ControllerKey {
-    return kControllerTree.filter({$0.value.index == 2}).first!.0
+    return kControllerTree.filter({$0.value.index == 1}).first!.0
 }

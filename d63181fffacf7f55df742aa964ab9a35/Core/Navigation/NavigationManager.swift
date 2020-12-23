@@ -60,6 +60,19 @@ class NavigationManager {
         return topViewController(rootController)
     }
     
+    
+    func getTabbarController() -> UITabBarController? {
+        guard let rootViewController = (UIApplication.shared.windows.first?.rootViewController) else { return nil }
+        if rootViewController is UINavigationController {
+            let navigationController = (rootViewController as? UINavigationController)!
+            if let viewController = navigationController.visibleViewController,
+                let tabbarController = viewController as? UITabBarController {
+                return tabbarController
+            }
+        }
+        return nil
+    }
+    
     private func topViewController(_ rootViewController: UIViewController) -> UIViewController {
         if rootViewController is UITabBarController {
             let tabBarController = (rootViewController as? UITabBarController)!
@@ -192,11 +205,38 @@ class NavigationManager {
         topVC?.navigationController?.popToRootViewController(animated: true)
     }
     
+    private func navigateFromTabController(_ controllerClass: AnyClass,
+                                           tabBarController: UITabBarController,
+                                           data: Any?) -> Bool {
+        for childViewController in tabBarController.viewControllers! {
+            if childViewController.isMember(of: controllerClass) {
+                let index = tabBarController.viewControllers?.firstIndex(of: childViewController)
+                if index != tabBarController.selectedIndex {
+                    childViewController.forcedByNavigationManager = true
+                    if let nData = data {
+                        childViewController.data = nData
+                    }
+                    tabBarController.selectedIndex = index!
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
     // MARK: - Push Method
     func navigateToController(_ controllerKey: ControllerKey, animated: Bool, data: Any?) {
         let topViewController = self.topViewController()
         guard let controllerClass = self.dictControllers[controllerKey] else {
             return
+        }
+        if let tabBarController = topViewController?.tabBarController {
+            let isNavigate = navigateFromTabController(controllerClass,
+                                                       tabBarController: tabBarController,
+                                                       data: data)
+            if isNavigate {
+                return
+            }
         }
         if let navigationController = topViewController?.navigationController {
             let isNavigate = navigateFromNavigationController(controllerClass,

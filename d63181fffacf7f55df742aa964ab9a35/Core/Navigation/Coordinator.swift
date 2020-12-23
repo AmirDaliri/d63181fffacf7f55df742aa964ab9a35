@@ -109,4 +109,34 @@ class Coordinator {
         }
         NavigationManager.shared.popToRootNavigationVC()
     }
+    
+    func removeControllersInNavigation(_ keys: [ControllerKey]) {
+        guard let topViewController =  NavigationManager.shared.topViewController() else { return }
+        
+        if let controllers = topViewController.navigationController?.viewControllers {
+            let newControllers = removeControllersFromArray(keys, controllers: controllers)
+            if controllers != newControllers {
+                topViewController.navigationController?.viewControllers = newControllers
+            }
+        }
+        if let controllers = topViewController.tabBarController?.navigationController?.viewControllers {
+            let newControllers = removeControllersFromArray(keys, controllers: controllers)
+            if controllers != newControllers {
+                topViewController.tabBarController?.navigationController?.viewControllers = newControllers
+            }
+        }
+    }
+    
+    private func removeControllersFromArray(_ keys: [ControllerKey], controllers: [UIViewController]) -> [UIViewController] {
+        var controllersMutable: [UIViewController] = Array(controllers)
+        
+        for controller in controllers {
+            for key in keys where controller.controllerKey == key {
+                if let index = controllers.firstIndex(of: controller) {
+                    controllersMutable.remove(at: index)
+                }
+            }
+        }
+        return controllersMutable
+    }
 }
