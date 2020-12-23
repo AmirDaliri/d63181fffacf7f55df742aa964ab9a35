@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: - Station
 struct Station: Codable {
-    let name: String?
-    let coordinateX, coordinateY, capacity, stock: Int?
-    let need: Int?
+    var name: String?
+    var coordinateX, coordinateY, capacity, stock: Int?
+    var need: Int?
 }
 
 // MARK: Station convenience initializers and mutators
