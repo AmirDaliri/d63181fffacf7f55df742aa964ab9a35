@@ -8,13 +8,19 @@
 import UIKit
 
 class SplashViewController: BaseVC {
-
+    
     // MARK: - Lifecycle Methods
+    private var networkManager = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // I'm Here...
+        isNavigationBarHidden = true
+        
+        delay(1) {
+            Coordinator.shared.removeControllersInNavigation([ControllerKeys.main.rawValue])
+            Coordinator.shared.requestNavigation(.main)
+        }
     }
-
 }

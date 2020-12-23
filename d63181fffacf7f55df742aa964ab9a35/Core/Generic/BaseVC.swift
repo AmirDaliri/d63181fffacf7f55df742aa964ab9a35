@@ -64,9 +64,11 @@ class BaseVC: UIViewController {
         if !isNavigationBarHidden {
             navigationController?.navigationBar.shadowImage = UIImage()
             navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            navigationController?.navigationBar.barTintColor = .darkGray
+            navigationController?.navigationBar.barTintColor = .white
             navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.5254901961, blue: 0, alpha: 1)
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        } else {
+            navigationController?.navigationBar.isHidden = true
         }
     }
     
