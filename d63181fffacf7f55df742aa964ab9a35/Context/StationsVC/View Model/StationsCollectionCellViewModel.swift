@@ -20,12 +20,12 @@ class StationsCollectionCellViewModel: BaseVM {
         return station.name ?? ""
     }
     
-    var coordinateX: Int {
-        return station.coordinateX ?? 0
+    var coordinateX: Double {
+        return station.coordinateX ?? 0.0
     }
     
-    var coordinateY: Int {
-        return station.coordinateY ?? 0
+    var coordinateY: Double {
+        return station.coordinateY ?? 0.0
     }
     
     var capacity: Int {
