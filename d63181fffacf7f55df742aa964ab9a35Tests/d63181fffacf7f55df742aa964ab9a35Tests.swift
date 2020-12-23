@@ -29,5 +29,4 @@ class d63181fffacf7f55df742aa964ab9a35Tests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

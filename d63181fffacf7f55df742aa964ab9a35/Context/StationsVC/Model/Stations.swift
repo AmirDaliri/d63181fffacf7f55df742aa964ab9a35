@@ -11,8 +11,8 @@ import Foundation
 // MARK: - Station
 struct Station: Codable {
     var name: String?
-    var coordinateX, coordinateY, capacity, stock: Int?
-    var need: Int?
+    var coordinateX, coordinateY: Double?
+    var need, capacity, stock: Int?
 }
 
 // MARK: Station convenience initializers and mutators
@@ -31,24 +31,6 @@ extension Station {
 
     init(fromURL url: URL) throws {
         try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        name: String?? = nil,
-        coordinateX: Int?? = nil,
-        coordinateY: Int?? = nil,
-        capacity: Int?? = nil,
-        stock: Int?? = nil,
-        need: Int?? = nil
-    ) -> Station {
-        return Station(
-            name: name ?? self.name,
-            coordinateX: coordinateX ?? self.coordinateX,
-            coordinateY: coordinateY ?? self.coordinateY,
-            capacity: capacity ?? self.capacity,
-            stock: stock ?? self.stock,
-            need: need ?? self.need
-        )
     }
 
     func jsonData() throws -> Data {
