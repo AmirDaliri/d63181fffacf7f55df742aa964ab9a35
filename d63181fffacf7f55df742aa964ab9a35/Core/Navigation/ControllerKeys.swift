@@ -11,7 +11,7 @@ typealias ControllerKey = String
 
 let kControllerMap: [ ControllerKey: (classType: UIViewController.Type, title: String)] =
     [
-        ControllerKeys.splash.rawValue: (SplashViewController.self, ""),
+        ControllerKeys.splash.rawValue: (IntroViewController.self, ""),
         ControllerKeys.main.rawValue: (MainTabbarViewController.self, ""),
         ControllerKeys.stations.rawValue: (StationsViewController.self, "Stations"),
         ControllerKeys.faves.rawValue: (FavesViewController.self, "Favorites")

@@ -13,7 +13,7 @@ class MainTabbarViewController: UITabBarController, UITabBarControllerDelegate {
     private let buttonWidth = UIScreen.main.bounds.size.width / CGFloat(kControllerTreeKeys.count)
     private var buttons: [UIButton] = []
     
-    static var selectedTextColor: UIColor { return .orange }
+    static var selectedTextColor: UIColor { return #colorLiteral(red: 1, green: 0.5254901961, blue: 0, alpha: 1) }
     static var normalTextColor: UIColor { return UIColor.black}
     static var backgroundColor: UIColor { return .white}
     static var footerLineColor: UIColor { return .black }

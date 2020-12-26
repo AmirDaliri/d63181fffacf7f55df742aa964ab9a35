@@ -29,7 +29,8 @@ class StationsViewController: BaseVC {
         // I'm Here...
         isNavigationBarHidden = true
         bindUI()
-        viewModel.getStations()
+        viewModel.getStations()        
+        print(self.data)
     }
 
     // MARK: - Private Method
@@ -50,57 +51,6 @@ class StationsViewController: BaseVC {
     private func updateUI() {
         collectionView.reloadData()
     }
-    
-    @IBAction func nextPageButtonClicked(_ sender: UIButton) {
-        /*
-        let visibleItems: NSArray = self.collectionView.indexPathsForVisibleItems as NSArray
-        let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
-        let nextItem: IndexPath = IndexPath(item: currentItem.item + 1, section: 0)
-        if nextItem.row < viewModel.numberOfRows {
-            self.collectionView.scrollToItem(at: nextItem, at: .left, animated: true)
-        }
-        */
-        
-        /*
-        let visibleItems: NSArray = self.collectionView.indexPathsForVisibleItems as NSArray
-
-        var minItem: NSIndexPath = visibleItems.object(at: 0) as! NSIndexPath
-        for itr in visibleItems {
-            if minItem.row > (itr as AnyObject).row {
-                minItem = itr as! NSIndexPath
-            }
-        }
-        print(minItem.row)
-        print(viewModel.numberOfRows)
-        if (minItem.row) < (viewModel.numberOfRows) {
-            let nextItem = NSIndexPath(row: minItem.row + 1, section: 0)
-            self.collectionView.scrollToItem(at: nextItem as IndexPath, at: .left, animated: true)
-        } else {
-            sender.isEnabled = false
-        }
-        */
-        
-        let visibleItems: NSArray = self.collectionView.indexPathsForVisibleItems as NSArray
-        let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
-        let nextItem: IndexPath = IndexPath(item: currentItem.item + 1, section: 0)
-        if nextItem.row < viewModel.numberOfRows {
-            self.collectionView.scrollToItem(at: nextItem, at: .left, animated: true)
-        }
-    }
-    
-    @IBAction func previousPageButtonClicked(_ sender: UIButton) {
-        let visibleItems: NSArray = self.collectionView.indexPathsForVisibleItems as NSArray
-        var minItem: NSIndexPath = visibleItems.object(at: 0) as! NSIndexPath
-        for itr in visibleItems {
-
-            if minItem.row > (itr as AnyObject).row {
-                minItem = itr as! NSIndexPath
-            }
-        }
-        let nextItem = NSIndexPath(row: minItem.row - 1, section: 0)
-        self.collectionView.scrollToItem(at: nextItem as IndexPath, at: .right, animated: true)
-    }
-    
 }
 
 // MARK: - UICollectionView Delegate Datasource
