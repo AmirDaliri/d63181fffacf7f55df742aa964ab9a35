@@ -27,7 +27,7 @@ class ControllerFactory {
             if let controller = ControllerFactory.viewController(controllerKey,
                                                                  data: data) {
 
-                let navController = navigationController(controller, popGestureEnabled: true)
+                let navController = navigationController(controller, popGestureEnabled: false)
 
                 viewControllers.append(navController)
             }
@@ -44,7 +44,7 @@ class ControllerFactory {
         return tabBarController
     }
     
-    static func navigationController(_ root: UIViewController, popGestureEnabled: Bool = true) -> UINavigationController {
+    static func navigationController(_ root: UIViewController, popGestureEnabled: Bool = false) -> UINavigationController {
         let navigationController = UINavigationController(rootViewController: root)
         navigationController.navigationBar.tintColor = UIColor.white
         navigationController.navigationBar.barTintColor = UIColor.white
