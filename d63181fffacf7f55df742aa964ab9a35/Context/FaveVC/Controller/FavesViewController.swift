@@ -43,6 +43,7 @@ class FavesViewController: BaseVC {
             switch state {
             case .success:
                 self.updateUI()
+                self.viewModel.setupEmptyView(tableView: self.tableView)
             case .error(let err):
                 self.handleAlertView(title: nil, message: err ?? "")
             default:

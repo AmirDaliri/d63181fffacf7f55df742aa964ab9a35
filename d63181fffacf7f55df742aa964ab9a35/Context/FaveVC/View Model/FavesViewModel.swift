@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class FavesViewModel: BaseVM {
     
@@ -62,5 +63,13 @@ class FavesViewModel: BaseVM {
     
     func setNSFetchedResultsControllerDelegate<D: NSFetchedResultsControllerDelegate>(_ delegate: D) {
         controller.delegate = delegate
+    }
+    
+    func setupEmptyView(tableView: UITableView) {
+        if controller.fetchedObjects?.isEmpty ?? false {
+            if let topVC = NavigationManager.shared.topViewController() {
+                TableViewHelper.EmptyMessage(message: "There is no favourites found.", viewController: topVC, tableView: tableView)
+            }
+        }
     }
 }
