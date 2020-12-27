@@ -60,13 +60,13 @@ class IntroViewController: BaseVC {
     
     // MARK: - IBAction
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-//        if let name = self.whartonTextField.text, name.count > 0 {
-            spacecraft.name = "name"
+        if let name = self.whartonTextField.text, name.count > 0 {
+            spacecraft.name = name
             Coordinator.shared.removeControllersInNavigation([ControllerKeys.main.rawValue])
             Coordinator.shared.requestNavigation(.main, data: spacecraft, animated: true)
-//        } else {
-//            handleAlertView(title: "ops", message: "please enter a name for your spacecraft")
-//        }
+        } else {
+            handleAlertView(title: "ops", message: "please enter a name for your spacecraft")
+        }
     }
     
     @objc func slidersValueChanged(_ slider: UISlider, _ event: UIEvent) {
