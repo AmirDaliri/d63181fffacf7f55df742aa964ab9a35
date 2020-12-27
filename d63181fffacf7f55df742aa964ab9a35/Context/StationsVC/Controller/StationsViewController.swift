@@ -21,6 +21,27 @@ class StationsViewController: BaseVC {
             searchBar.delegate = self
         }
     }
+    @IBOutlet private weak var ugsLabel: UILabel! {
+        didSet {
+            ugsLabel.text = viewModel.getUGS(parameter: (self.data as? Spacecraft)?.capacity)
+        }
+    }
+    @IBOutlet private weak var eusLabel: UILabel! {
+        didSet {
+            eusLabel.text = viewModel.getEUS(parameter: (self.data as? Spacecraft)?.spped)
+        }
+    }
+    @IBOutlet private weak var timerLabel: UILabel!
+    @IBOutlet private weak var dsLabel: UILabel! {
+        didSet {
+            dsLabel.text = viewModel.getDS(parameter: (self.data as? Spacecraft)?.durability)
+        }
+    }
+    @IBOutlet private weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.text = (self.data as? Spacecraft)?.name
+        }
+    }
     
     // MARK: - Properties
     private var viewModel = StationsViewModel()
@@ -35,8 +56,9 @@ class StationsViewController: BaseVC {
         // I'm Here...
         isNavigationBarHidden = true
         bindUI()
+        viewModel.delegate = self
+        viewModel.startTimer()
         viewModel.getStations()        
-        print(self.data)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -113,5 +135,12 @@ extension StationsViewController: UISearchBarDelegate {
                 }
             }
         }
+    }
+}
+
+// MARK: - StationsVMDelegate Method
+extension StationsViewController: StationsVMDelegate {
+    func timerUpdated(second: String, timeIsUP: Bool) {
+        timerLabel.text = second
     }
 }

@@ -12,7 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StationsViewController" customModule="d63181fffacf7f55df742aa964ab9a35" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="RII-vD-ROn" id="2df-kY-w3K"/>
+                <outlet property="dsLabel" destination="31C-c3-Axl" id="Dn4-Ay-j0y"/>
+                <outlet property="eusLabel" destination="Hwk-Z8-slv" id="0T8-v8-qic"/>
+                <outlet property="nameLabel" destination="Pdk-qR-3Mn" id="2q8-d7-r7D"/>
                 <outlet property="searchBar" destination="Q1T-6q-4vh" id="oIt-UE-SOA"/>
+                <outlet property="timerLabel" destination="1PI-Yl-ntQ" id="oLk-3Z-Rqg"/>
+                <outlet property="ugsLabel" destination="Feh-5Q-nuo" id="CIU-0j-CrK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -54,7 +59,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PI-Yl-ntQ">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PI-Yl-ntQ">
                             <rect key="frame" x="244" y="0.0" width="122" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
@@ -92,6 +97,12 @@
                         </label>
                     </subviews>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdk-qR-3Mn">
+                    <rect key="frame" x="169" y="536" width="76" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -100,6 +111,8 @@
                 <constraint firstItem="Gzb-dC-kTg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="5pZ-kp-jRQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WrW-GC-T2r" secondAttribute="trailing" constant="24" id="7A1-gH-hpJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gzb-dC-kTg" secondAttribute="trailing" constant="24" id="7x4-0N-hRq"/>
+                <constraint firstItem="Pdk-qR-3Mn" firstAttribute="top" secondItem="RII-vD-ROn" secondAttribute="bottom" constant="32" id="9pY-b0-JkD"/>
+                <constraint firstItem="Pdk-qR-3Mn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CBh-Xk-A5I"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gFe-Ei-aAL" secondAttribute="trailing" constant="24" id="LSQ-Hi-7nt"/>
                 <constraint firstItem="gFe-Ei-aAL" firstAttribute="top" secondItem="Gzb-dC-kTg" secondAttribute="bottom" constant="24" id="MNt-yv-tg9"/>
                 <constraint firstItem="Q1T-6q-4vh" firstAttribute="top" secondItem="gFe-Ei-aAL" secondAttribute="bottom" constant="24" id="TFm-x3-OBb"/>

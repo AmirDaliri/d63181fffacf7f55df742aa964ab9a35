@@ -51,29 +51,6 @@
 		C5BFB10B2593667A00EE7F00 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB10A2593667A00EE7F00 /* ParameterEncoding.swift */; };
 		C5BFB10F2593668700EE7F00 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB10E2593668700EE7F00 /* URLParameterEncoding.swift */; };
 		C5BFB1132593669300EE7F00 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1122593669300EE7F00 /* JSONParameterEncoder.swift */; };
-		C5BFB1432593682200EE7F00 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB12F2593682000EE7F00 /* ThreadHelper.swift */; };
-		C5BFB1442593682200EE7F00 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1312593682000EE7F00 /* UIButton+Kingfisher.swift */; };
-		C5BFB1452593682200EE7F00 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1342593682100EE7F00 /* Box.swift */; };
-		C5BFB1462593682200EE7F00 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB13B2593682100EE7F00 /* ImagePrefetcher.swift */; };
-		C5BFB1472593682200EE7F00 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1362593682100EE7F00 /* Kingfisher.swift */; };
-		C5BFB1482593682200EE7F00 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB13C2593682100EE7F00 /* KingfisherManager.swift */; };
-		C5BFB1492593682200EE7F00 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1402593682200EE7F00 /* ImageProcessor.swift */; };
-		C5BFB14A2593682200EE7F00 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB13F2593682200EE7F00 /* Indicator.swift */; };
-		C5BFB14B2593682200EE7F00 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB13A2593682100EE7F00 /* RequestModifier.swift */; };
-		C5BFB14C2593682200EE7F00 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1382593682100EE7F00 /* ImageDownloader.swift */; };
-		C5BFB14D2593682200EE7F00 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB13D2593682200EE7F00 /* String+MD5.swift */; };
-		C5BFB14E2593682200EE7F00 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1322593682100EE7F00 /* ImageCache.swift */; };
-		C5BFB14F2593682200EE7F00 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1372593682100EE7F00 /* ImageView+Kingfisher.swift */; };
-		C5BFB1502593682200EE7F00 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1302593682000EE7F00 /* ImageTransition.swift */; };
-		C5BFB1512593682200EE7F00 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB12D2593682000EE7F00 /* Placeholder.swift */; };
-		C5BFB1522593682200EE7F00 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB12C2593682000EE7F00 /* AnimatedImageView.swift */; };
-		C5BFB1532593682200EE7F00 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1332593682100EE7F00 /* FormatIndicatedCacheSerializer.swift */; };
-		C5BFB1542593682200EE7F00 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB12E2593682000EE7F00 /* KingfisherOptionsInfo.swift */; };
-		C5BFB1552593682200EE7F00 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1352593682100EE7F00 /* Resource.swift */; };
-		C5BFB1562593682200EE7F00 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1412593682200EE7F00 /* Image.swift */; };
-		C5BFB1572593682200EE7F00 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB13E2593682200EE7F00 /* ImageModifier.swift */; };
-		C5BFB1582593682200EE7F00 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1422593682200EE7F00 /* Filter.swift */; };
-		C5BFB1592593682200EE7F00 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1392593682100EE7F00 /* CacheSerializer.swift */; };
 		C5BFB1642593696600EE7F00 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB1632593696600EE7F00 /* Stations.swift */; };
 		C5BFB16825936A6F00EE7F00 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB16725936A6F00EE7F00 /* Reachability.swift */; };
 		C5BFB17125936D2400EE7F00 /* StationsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB17025936D2400EE7F00 /* StationsRequest.swift */; };
@@ -149,29 +126,6 @@
 		C5BFB10A2593667A00EE7F00 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		C5BFB10E2593668700EE7F00 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		C5BFB1122593669300EE7F00 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
-		C5BFB12C2593682000EE7F00 /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
-		C5BFB12D2593682000EE7F00 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
-		C5BFB12E2593682000EE7F00 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
-		C5BFB12F2593682000EE7F00 /* ThreadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
-		C5BFB1302593682000EE7F00 /* ImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
-		C5BFB1312593682000EE7F00 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
-		C5BFB1322593682100EE7F00 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		C5BFB1332593682100EE7F00 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
-		C5BFB1342593682100EE7F00 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		C5BFB1352593682100EE7F00 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		C5BFB1362593682100EE7F00 /* Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kingfisher.swift; sourceTree = "<group>"; };
-		C5BFB1372593682100EE7F00 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
-		C5BFB1382593682100EE7F00 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		C5BFB1392593682100EE7F00 /* CacheSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSerializer.swift; sourceTree = "<group>"; };
-		C5BFB13A2593682100EE7F00 /* RequestModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModifier.swift; sourceTree = "<group>"; };
-		C5BFB13B2593682100EE7F00 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
-		C5BFB13C2593682100EE7F00 /* KingfisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherManager.swift; sourceTree = "<group>"; };
-		C5BFB13D2593682200EE7F00 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		C5BFB13E2593682200EE7F00 /* ImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
-		C5BFB13F2593682200EE7F00 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
-		C5BFB1402593682200EE7F00 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
-		C5BFB1412593682200EE7F00 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		C5BFB1422593682200EE7F00 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		C5BFB1632593696600EE7F00 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 		C5BFB16725936A6F00EE7F00 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C5BFB17025936D2400EE7F00 /* StationsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsRequest.swift; sourceTree = "<group>"; };
@@ -363,7 +317,6 @@
 		C53904FE25929D4C00A7856B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				C5BFB15E2593684300EE7F00 /* Image Cashing */,
 				C53904F825929C5C00A7856B /* AlertBuilder.swift */,
 				C5BFB16725936A6F00EE7F00 /* Reachability.swift */,
 				C5BFB17A2593734200EE7F00 /* HelperFunction.swift */,
@@ -468,36 +421,6 @@
 				C5BFB0EC2593662000EE7F00 /* EndPoints.swift */,
 			);
 			path = EndPoint;
-			sourceTree = "<group>";
-		};
-		C5BFB15E2593684300EE7F00 /* Image Cashing */ = {
-			isa = PBXGroup;
-			children = (
-				C5BFB12C2593682000EE7F00 /* AnimatedImageView.swift */,
-				C5BFB1342593682100EE7F00 /* Box.swift */,
-				C5BFB1392593682100EE7F00 /* CacheSerializer.swift */,
-				C5BFB1422593682200EE7F00 /* Filter.swift */,
-				C5BFB1332593682100EE7F00 /* FormatIndicatedCacheSerializer.swift */,
-				C5BFB1412593682200EE7F00 /* Image.swift */,
-				C5BFB1322593682100EE7F00 /* ImageCache.swift */,
-				C5BFB1382593682100EE7F00 /* ImageDownloader.swift */,
-				C5BFB13E2593682200EE7F00 /* ImageModifier.swift */,
-				C5BFB13B2593682100EE7F00 /* ImagePrefetcher.swift */,
-				C5BFB1402593682200EE7F00 /* ImageProcessor.swift */,
-				C5BFB1302593682000EE7F00 /* ImageTransition.swift */,
-				C5BFB1372593682100EE7F00 /* ImageView+Kingfisher.swift */,
-				C5BFB13F2593682200EE7F00 /* Indicator.swift */,
-				C5BFB1362593682100EE7F00 /* Kingfisher.swift */,
-				C5BFB13C2593682100EE7F00 /* KingfisherManager.swift */,
-				C5BFB12E2593682000EE7F00 /* KingfisherOptionsInfo.swift */,
-				C5BFB12D2593682000EE7F00 /* Placeholder.swift */,
-				C5BFB13A2593682100EE7F00 /* RequestModifier.swift */,
-				C5BFB1352593682100EE7F00 /* Resource.swift */,
-				C5BFB13D2593682200EE7F00 /* String+MD5.swift */,
-				C5BFB12F2593682000EE7F00 /* ThreadHelper.swift */,
-				C5BFB1312593682000EE7F00 /* UIButton+Kingfisher.swift */,
-			);
-			path = "Image Cashing";
 			sourceTree = "<group>";
 		};
 		C5BFB16D25936CC400EE7F00 /* Model */ = {
@@ -659,20 +582,13 @@
 			files = (
 				C57FA8232593A8B900815E32 /* StationsCollectionCellViewModel.swift in Sources */,
 				C53904CD259296EE00A7856B /* UIViewController+Extension.swift in Sources */,
-				C5BFB1502593682200EE7F00 /* ImageTransition.swift in Sources */,
-				C5BFB1492593682200EE7F00 /* ImageProcessor.swift in Sources */,
 				C5BFB10F2593668700EE7F00 /* URLParameterEncoding.swift in Sources */,
 				C5191A002593968300C25540 /* Spinner.swift in Sources */,
 				C57FA8522593D4F200815E32 /* UITextField+Extension.swift in Sources */,
-				C5BFB1462593682200EE7F00 /* ImagePrefetcher.swift in Sources */,
-				C5BFB1442593682200EE7F00 /* UIButton+Kingfisher.swift in Sources */,
 				C53904A92592928200A7856B /* d63181fffacf7f55df742aa964ab9a35.xcdatamodeld in Sources */,
 				C5BFB0E5259365D100EE7F00 /* StationsViewController.swift in Sources */,
-				C5BFB1482593682200EE7F00 /* KingfisherManager.swift in Sources */,
 				C5BFB0F32593663700EE7F00 /* NetworkManager.swift in Sources */,
-				C5BFB1432593682200EE7F00 /* ThreadHelper.swift in Sources */,
 				C539049F2592928200A7856B /* AppDelegate.swift in Sources */,
-				C5BFB14E2593682200EE7F00 /* ImageCache.swift in Sources */,
 				C5BFB1642593696600EE7F00 /* Stations.swift in Sources */,
 				C53904CA259296C300A7856B /* NavigationManager.swift in Sources */,
 				C5BFB0FF2593665900EE7F00 /* HTTPMethod.swift in Sources */,
@@ -680,10 +596,7 @@
 				C53904F125929BD900A7856B /* BaseTableViewCell.swift in Sources */,
 				C53904F425929BF900A7856B /* BaseCollectionViewCell.swift in Sources */,
 				C51919F72593958700C25540 /* StationsViewModel.swift in Sources */,
-				C5BFB1522593682200EE7F00 /* AnimatedImageView.swift in Sources */,
 				C5BFB1A125937DAB00EE7F00 /* UIColor+Extension.swift in Sources */,
-				C5BFB1572593682200EE7F00 /* ImageModifier.swift in Sources */,
-				C5BFB1552593682200EE7F00 /* Resource.swift in Sources */,
 				C5BFB18F259373FB00EE7F00 /* State.swift in Sources */,
 				C5BFB18B259373E700EE7F00 /* Observable.swift in Sources */,
 				C5BFB17B2593734200EE7F00 /* HelperFunction.swift in Sources */,
@@ -693,42 +606,29 @@
 				C53904C4259296B500A7856B /* ControllerFactory.swift in Sources */,
 				C5BFB10B2593667A00EE7F00 /* ParameterEncoding.swift in Sources */,
 				C57FA82B2593B04800815E32 /* UIView+Extension.swift in Sources */,
-				C5BFB1542593682200EE7F00 /* KingfisherOptionsInfo.swift in Sources */,
 				C53904A12592928200A7856B /* SceneDelegate.swift in Sources */,
 				C5BFB1A525937DCE00EE7F00 /* Optional+Extension.swift in Sources */,
 				C5BFB1072593666E00EE7F00 /* NetworkLogger.swift in Sources */,
 				C53904EE25929BCE00A7856B /* BaseVM.swift in Sources */,
-				C5BFB1512593682200EE7F00 /* Placeholder.swift in Sources */,
 				C53904EB25929BC200A7856B /* BaseVC.swift in Sources */,
 				C5BFB1132593669300EE7F00 /* JSONParameterEncoder.swift in Sources */,
-				C5BFB14C2593682200EE7F00 /* ImageDownloader.swift in Sources */,
 				C5BFB0FB2593664E00EE7F00 /* Router.swift in Sources */,
 				C5BFB1032593666400EE7F00 /* HTTPTask.swift in Sources */,
 				C5BFB17125936D2400EE7F00 /* StationsRequest.swift in Sources */,
 				C53904C1259296A600A7856B /* ControllerKeys.swift in Sources */,
-				C5BFB14A2593682200EE7F00 /* Indicator.swift in Sources */,
 				C5BFB198259374EC00EE7F00 /* FavesViewController.swift in Sources */,
 				C57FA8272593AEE700815E32 /* PagingCollectionViewLayout.swift in Sources */,
-				C5BFB14B2593682200EE7F00 /* RequestModifier.swift in Sources */,
-				C5BFB1592593682200EE7F00 /* CacheSerializer.swift in Sources */,
 				C53904F925929C5C00A7856B /* AlertBuilder.swift in Sources */,
-				C5BFB1452593682200EE7F00 /* Box.swift in Sources */,
 				C5BFB187259373DB00EE7F00 /* Disposable.swift in Sources */,
 				C53904D0259296FD00A7856B /* UINavigationController+Extension.swift in Sources */,
-				C5BFB1472593682200EE7F00 /* Kingfisher.swift in Sources */,
-				C5BFB14F2593682200EE7F00 /* ImageView+Kingfisher.swift in Sources */,
-				C5BFB1532593682200EE7F00 /* FormatIndicatedCacheSerializer.swift in Sources */,
 				C53904DD259297C500A7856B /* MainTabbarViewController.swift in Sources */,
 				C53904E725929B9600A7856B /* IntroViewController.swift in Sources */,
 				C57FA81B2593A7ED00815E32 /* StationsCollectionViewCell.swift in Sources */,
 				C57FA84E2593D1FF00815E32 /* RoundedShadowView.swift in Sources */,
 				C5BFB19D25937D6600EE7F00 /* CALayer+Extension.swift in Sources */,
 				C5BFB0F72593664300EE7F00 /* EndPointType.swift in Sources */,
-				C5BFB14D2593682200EE7F00 /* String+MD5.swift in Sources */,
-				C5BFB1582593682200EE7F00 /* Filter.swift in Sources */,
 				C5BFB1832593739800EE7F00 /* BaseView.swift in Sources */,
 				C5F38C6725929E830065C60D /* AppConstants.swift in Sources */,
-				C5BFB1562593682200EE7F00 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
