@@ -38,6 +38,10 @@
 		C57FA8462593C9AA00815E32 /* StationsModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57FA8452593C9AA00815E32 /* StationsModelTest.swift */; };
 		C57FA84E2593D1FF00815E32 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57FA84D2593D1FF00815E32 /* RoundedShadowView.swift */; };
 		C57FA8522593D4F200815E32 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57FA8512593D4F200815E32 /* UITextField+Extension.swift */; };
+		C5ADFE362598BC510065ADB1 /* FaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ADFE342598BC510065ADB1 /* FaveTableViewCell.swift */; };
+		C5ADFE372598BC510065ADB1 /* FaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ADFE352598BC510065ADB1 /* FaveTableViewCell.xib */; };
+		C5ADFE3E2598C1F00065ADB1 /* FaveTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ADFE3D2598C1F00065ADB1 /* FaveTableViewCellViewModel.swift */; };
+		C5ADFE452598C2140065ADB1 /* FavesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ADFE442598C2140065ADB1 /* FavesViewModel.swift */; };
 		C5BFAFD2259345B200EE7F00 /* d63181fffacf7f55df742aa964ab9a35Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFAFD1259345B200EE7F00 /* d63181fffacf7f55df742aa964ab9a35Tests.swift */; };
 		C5BFB0E5259365D100EE7F00 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFB0E3259365D100EE7F00 /* StationsViewController.swift */; };
 		C5BFB0E6259365D100EE7F00 /* StationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BFB0E4259365D100EE7F00 /* StationsViewController.xib */; };
@@ -111,6 +115,10 @@
 		C57FA8452593C9AA00815E32 /* StationsModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsModelTest.swift; sourceTree = "<group>"; };
 		C57FA84D2593D1FF00815E32 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		C57FA8512593D4F200815E32 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		C5ADFE342598BC510065ADB1 /* FaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveTableViewCell.swift; sourceTree = "<group>"; };
+		C5ADFE352598BC510065ADB1 /* FaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaveTableViewCell.xib; sourceTree = "<group>"; };
+		C5ADFE3D2598C1F00065ADB1 /* FaveTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		C5ADFE442598C2140065ADB1 /* FavesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesViewModel.swift; sourceTree = "<group>"; };
 		C5BFAFCF259345B200EE7F00 /* d63181fffacf7f55df742aa964ab9a35Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = d63181fffacf7f55df742aa964ab9a35Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BFAFD1259345B200EE7F00 /* d63181fffacf7f55df742aa964ab9a35Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = d63181fffacf7f55df742aa964ab9a35Tests.swift; sourceTree = "<group>"; };
 		C5BFAFD3259345B200EE7F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -276,7 +284,7 @@
 		C53904E0259297CB00A7856B /* Context */ = {
 			isa = PBXGroup;
 			children = (
-				C53904FB25929D2600A7856B /* splash */,
+				C53904FB25929D2600A7856B /* Intro */,
 				C53904E2259297E700A7856B /* Tabbar */,
 				C5BFB0E9259365D700EE7F00 /* StationsVC */,
 				C5BFB1C72593916700EE7F00 /* FaveVC */,
@@ -305,13 +313,13 @@
 			path = Generic;
 			sourceTree = "<group>";
 		};
-		C53904FB25929D2600A7856B /* splash */ = {
+		C53904FB25929D2600A7856B /* Intro */ = {
 			isa = PBXGroup;
 			children = (
 				C54CE2AA2597592A00F9F13F /* Controller */,
 				C54CE2A72597591E00F9F13F /* Model */,
 			);
-			path = splash;
+			path = Intro;
 			sourceTree = "<group>";
 		};
 		C53904FE25929D4C00A7856B /* Utility */ = {
@@ -349,6 +357,24 @@
 				C57FA81A2593A7ED00815E32 /* StationsCollectionViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C5ADFE3A2598BC550065ADB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5ADFE342598BC510065ADB1 /* FaveTableViewCell.swift */,
+				C5ADFE352598BC510065ADB1 /* FaveTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C5ADFE412598C1F90065ADB1 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5ADFE442598C2140065ADB1 /* FavesViewModel.swift */,
+				C5ADFE3D2598C1F00065ADB1 /* FaveTableViewCellViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		C5BFAFD0259345B200EE7F00 /* d63181fffacf7f55df742aa964ab9a35Tests */ = {
@@ -464,6 +490,8 @@
 			isa = PBXGroup;
 			children = (
 				C5BFB1C42593916300EE7F00 /* Controller */,
+				C5ADFE412598C1F90065ADB1 /* View Model */,
+				C5ADFE3A2598BC550065ADB1 /* View */,
 			);
 			path = FaveVC;
 			sourceTree = "<group>";
@@ -558,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C53904AE2592928400A7856B /* LaunchScreen.storyboard in Resources */,
+				C5ADFE372598BC510065ADB1 /* FaveTableViewCell.xib in Resources */,
 				C53904AB2592928400A7856B /* Assets.xcassets in Resources */,
 				C53904E825929B9600A7856B /* IntroViewController.xib in Resources */,
 				C5BFB0E6259365D100EE7F00 /* StationsViewController.xib in Resources */,
@@ -601,8 +630,10 @@
 				C5BFB18B259373E700EE7F00 /* Observable.swift in Sources */,
 				C5BFB17B2593734200EE7F00 /* HelperFunction.swift in Sources */,
 				C53904C7259296BC00A7856B /* Coordinator.swift in Sources */,
+				C5ADFE3E2598C1F00065ADB1 /* FaveTableViewCellViewModel.swift in Sources */,
 				C54CE2A42597591000F9F13F /* Spacecraft.swift in Sources */,
 				C5BFB0ED2593662000EE7F00 /* EndPoints.swift in Sources */,
+				C5ADFE452598C2140065ADB1 /* FavesViewModel.swift in Sources */,
 				C53904C4259296B500A7856B /* ControllerFactory.swift in Sources */,
 				C5BFB10B2593667A00EE7F00 /* ParameterEncoding.swift in Sources */,
 				C57FA82B2593B04800815E32 /* UIView+Extension.swift in Sources */,
@@ -611,6 +642,7 @@
 				C5BFB1072593666E00EE7F00 /* NetworkLogger.swift in Sources */,
 				C53904EE25929BCE00A7856B /* BaseVM.swift in Sources */,
 				C53904EB25929BC200A7856B /* BaseVC.swift in Sources */,
+				C5ADFE362598BC510065ADB1 /* FaveTableViewCell.swift in Sources */,
 				C5BFB1132593669300EE7F00 /* JSONParameterEncoder.swift in Sources */,
 				C5BFB0FB2593664E00EE7F00 /* Router.swift in Sources */,
 				C5BFB1032593666400EE7F00 /* HTTPTask.swift in Sources */,
