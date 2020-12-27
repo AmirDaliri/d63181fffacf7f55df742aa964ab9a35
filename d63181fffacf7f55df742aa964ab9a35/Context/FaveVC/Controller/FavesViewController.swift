@@ -78,7 +78,7 @@ extension FavesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func configureCell(cell : FaveTableViewCell , indexPath: NSIndexPath) {
         let item  = viewModel.getStationItemAtIndex(indexPath: indexPath as IndexPath)
-        cell.faveTableViewCellViewModel = FaveTableViewCellViewModel(model: item)
+        cell.faveTableViewCellViewModel = FaveTableViewCellViewModel(model: item, idexPath: indexPath as IndexPath)
     }
 }
 
@@ -99,7 +99,7 @@ extension FavesViewController: NSFetchedResultsControllerDelegate {
         switch (type) {
         case .insert:
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .right)
                 tableView.backgroundView = nil
                 viewModel.attemptFetch()
             }
@@ -107,7 +107,8 @@ extension FavesViewController: NSFetchedResultsControllerDelegate {
             
         case .delete:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .left)
+                viewModel.attemptFetch()
             }
             break
             
@@ -117,7 +118,17 @@ extension FavesViewController: NSFetchedResultsControllerDelegate {
                 configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
             }
             break
-            
+        /**
+            Move Item
+
+            - SeeAlso: move cell with drag and drop
+
+            - Version: 1.0
+
+            - Author: amir daliri
+
+            - Note: not implemented
+        **/
         case .move:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .fade)

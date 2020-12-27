@@ -37,7 +37,7 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
     private func updateUI() {
         nameLabel.text = stationsCollectionCellViewModel.name
         dataLabel.text = "\(stationsCollectionCellViewModel.stock)/\(stationsCollectionCellViewModel.need)"
-        fetchGamesSeenIds(name: stationsCollectionCellViewModel.name)
+        fetchStationsTabel(name: stationsCollectionCellViewModel.name)
     }
     // MARK: - IBAction Method
     
@@ -61,7 +61,7 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
         faveButton.setImage(#imageLiteral(resourceName: "faved"), for: .normal)
     }
     
-    func fetchGamesSeenIds(name: String) {
+    func fetchStationsTabel(name: String) {
         
         let fetchRequest :NSFetchRequest<StationTabel> = StationTabel.fetchRequest()
         
@@ -69,6 +69,7 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
         fetchRequest.sortDescriptors = [datasort]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        controller.delegate = self
         self.stationTabelController = controller
         
         do{
@@ -81,14 +82,31 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
         
         if let items = controller.fetchedObjects {
             for i in items {
-                if i.name == name {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if i.name == name {
                         self.faveButton.setImage(#imageLiteral(resourceName: "faved"), for: .normal)
+                    } else {
+                        self.faveButton.setImage(#imageLiteral(resourceName: "unfave"), for: .normal)
                     }
-                } else {
-                    self.faveButton.setImage(#imageLiteral(resourceName: "faves"), for: .normal)
                 }
             }
+        }
+    }
+}
+
+// MARK: - NSFetchedResultsControllerDelegate Method
+
+extension StationsCollectionViewCell: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch (type) {
+        case .delete:
+            if let station = anObject as? StationTabel {
+                if station.name == stationsCollectionCellViewModel.name {
+                    self.faveButton.setImage(#imageLiteral(resourceName: "unfave"), for: .normal)
+                }
+            }
+        default:
+            break
         }
     }
 }

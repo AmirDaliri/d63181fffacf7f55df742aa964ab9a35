@@ -16,19 +16,20 @@ class FaveTableViewCell: BaseTableViewCell {
     @IBOutlet private weak var faveButton: UIButton!
     
     // MARK: - Properties
-    var faveTableViewCellViewModel: FaveTableViewCellViewModel = FaveTableViewCellViewModel() {
+    var faveTableViewCellViewModel: FaveTableViewCellViewModel? {
         didSet {
             updateUI()
         }
     }
     
-    
     // MARK: - Private Functions
     private func updateUI() {
-        nameLabel.text = faveTableViewCellViewModel.name
-        eusLabel.text = faveTableViewCellViewModel.eus
+        nameLabel.text = faveTableViewCellViewModel?.name
+        eusLabel.text = faveTableViewCellViewModel?.eus
     }
     
-    @IBAction func faveButtonTapped(_ sender: Any) {
+    // MARK: - IBAction
+    @IBAction func faveButtonTapped(_ sender: UIButton) {
+        faveTableViewCellViewModel?.removeItem()
     }
 }
