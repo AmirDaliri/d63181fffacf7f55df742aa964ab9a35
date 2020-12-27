@@ -23,28 +23,34 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTg-vQ-1F3">
                                 <rect key="frame" x="206" y="8" width="30" height="29"/>
                                 <state key="normal" image="unfave"/>
+                                <connections>
+                                    <action selector="faveButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0bj-ZG-zRe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfE-zB-njR">
                                 <rect key="frame" x="8" y="8" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyb-JF-eNT">
-                                <rect key="frame" x="8" y="37" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="242EUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyb-JF-eNT">
+                                <rect key="frame" x="8" y="37" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK7-or-Ff1">
                                 <rect key="frame" x="101" y="62" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeU-hW-Fne">
                                 <rect key="frame" x="101.5" y="107" width="41" height="30"/>
                                 <state key="normal" title="Travel"/>
+                                <connections>
+                                    <action selector="travelButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="GPJ-Kr-kEp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,6 +80,9 @@
             <size key="customSize" width="268" height="169"/>
             <connections>
                 <outlet property="containerView" destination="aJ7-Xw-PZA" id="cuA-Nj-Z8T"/>
+                <outlet property="dataLabel" destination="bfE-zB-njR" id="O0u-Qh-Qww"/>
+                <outlet property="eusLabel" destination="Wyb-JF-eNT" id="I79-as-mjQ"/>
+                <outlet property="nameLabel" destination="hK7-or-Ff1" id="o40-Jg-Ccz"/>
             </connections>
             <point key="canvasLocation" x="295.6521739130435" y="120.87053571428571"/>
         </collectionViewCell>

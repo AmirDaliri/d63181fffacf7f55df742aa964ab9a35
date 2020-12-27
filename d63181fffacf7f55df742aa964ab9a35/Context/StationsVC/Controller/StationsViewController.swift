@@ -16,11 +16,38 @@ class StationsViewController: BaseVC {
             setCollectionViewDataSourceDelegate(self)
         }
     }
+    @IBOutlet private weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
+    @IBOutlet private weak var ugsLabel: UILabel! {
+        didSet {
+            ugsLabel.text = viewModel.getUGS(parameter: (self.data as? Spacecraft)?.capacity)
+        }
+    }
+    @IBOutlet private weak var eusLabel: UILabel! {
+        didSet {
+            eusLabel.text = viewModel.getEUS(parameter: (self.data as? Spacecraft)?.spped)
+        }
+    }
+    @IBOutlet private weak var timerLabel: UILabel!
+    @IBOutlet private weak var dsLabel: UILabel! {
+        didSet {
+            dsLabel.text = viewModel.getDS(parameter: (self.data as? Spacecraft)?.durability)
+        }
+    }
+    @IBOutlet private weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.text = (self.data as? Spacecraft)?.name
+        }
+    }
     
     // MARK: - Properties
     private var viewModel = StationsViewModel()
     private var disposal = Disposal()
-    
+    private var searchedList: [Station]?
+
     // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
@@ -29,10 +56,15 @@ class StationsViewController: BaseVC {
         // I'm Here...
         isNavigationBarHidden = true
         bindUI()
+        viewModel.delegate = self
+        viewModel.startTimer()
         viewModel.getStations()        
-        print(self.data)
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     // MARK: - Private Method
     private func bindUI() {
         viewModel.state.observe { [weak self] (state) in
@@ -80,5 +112,35 @@ extension StationsViewController: UICollectionViewDataSource, UICollectionViewDe
         collectionView.decelerationRate = .fast
         collectionView.dataSource = dataSourceDelegate
         collectionView.delegate = dataSourceDelegate
+    }
+}
+
+
+// MARK: - UISearchBarDelegate Method
+extension StationsViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        viewModel.filterWithName(searchBar.text) {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            delay(0.1) {
+                searchBar.resignFirstResponder()
+                self.viewModel.resetFilter {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+    }
+}
+
+// MARK: - StationsVMDelegate Method
+extension StationsViewController: StationsVMDelegate {
+    func timerUpdated(second: String, timeIsUP: Bool) {
+        timerLabel.text = second
     }
 }
