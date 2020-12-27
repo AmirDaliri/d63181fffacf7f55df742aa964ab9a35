@@ -17,6 +17,10 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var eusLabel: UILabel!
+    @IBOutlet private weak var dataLabel: UILabel!
+    
     // MARK: - Properties
     var stationsCollectionCellViewModel: StationsCollectionCellViewModel = StationsCollectionCellViewModel() {
         didSet {
@@ -26,5 +30,15 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
     
     // MARK: - Private Functions
     private func updateUI() {
+        nameLabel.text = stationsCollectionCellViewModel.name
+        dataLabel.text = "\(stationsCollectionCellViewModel.stock)/\(stationsCollectionCellViewModel.need)"
+    }
+    // MARK: - IBAction Method
+    
+    @IBAction func faveButtonTapped(_ sender: Any) {
+        NavigationManager.shared.dismissTopController(.reveal, direction: .fromBottom, data: nil)
+    }
+    @IBAction func travelButtonTapped(_ sender: Any) {
+        NavigationManager.shared.dismissTopController()
     }
 }

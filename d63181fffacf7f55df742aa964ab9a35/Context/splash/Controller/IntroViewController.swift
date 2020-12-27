@@ -60,8 +60,13 @@ class IntroViewController: BaseVC {
     
     // MARK: - IBAction
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        Coordinator.shared.removeControllersInNavigation([ControllerKeys.main.rawValue])
-        Coordinator.shared.requestNavigation(.main, data: spacecraft, animated: true)
+        if let name = self.whartonTextField.text, name.count > 0 {
+            spacecraft.name = name
+            Coordinator.shared.removeControllersInNavigation([ControllerKeys.main.rawValue])
+            Coordinator.shared.requestNavigation(.main, data: spacecraft, animated: true)
+        } else {
+            handleAlertView(title: "ops", message: "please enter a name for your spacecraft")
+        }
     }
     
     @objc func slidersValueChanged(_ slider: UISlider, _ event: UIEvent) {
@@ -69,38 +74,18 @@ class IntroViewController: BaseVC {
         switch slider {
         case durabilitySlider:
             durabilitySlider.value = roundedStepValue
-//            durability = Int(roundedStepValue)
             spacecraft.durability = Int(roundedStepValue)
             durabilityLabel.text = String(Int(roundedStepValue))
         case speedSlider:
             speedSlider.value = roundedStepValue
-//            spped = Int(roundedStepValue)
             spacecraft.spped = Int(roundedStepValue)
             speedLabel.text = String(Int(roundedStepValue))
         case capacitySlider:
             capacitySlider.value = roundedStepValue
-//            capacity = Int(roundedStepValue)
             spacecraft.capacity = Int(roundedStepValue)
             capacityLabel.text = String(Int(roundedStepValue))
         default:
             break
         }
-        
-        /*
-        if let touchEvent = event.allTouches?.first {
-            switch touchEvent.phase {
-            case .ended:
-                if scrore > 100 {
-                    handleAlertView(title: "ops", message: "err")
-                    nextButton.isEnabled = false
-                    nextButton.backgroundColor = .lightGray
-                } else {
-                    nextButton.isEnabled = true
-                    nextButton.backgroundColor = #colorLiteral(red: 1, green: 0.5254901961, blue: 0, alpha: 1)
-                }
-            default: break
-            }
-        }
-        */
     }
 }

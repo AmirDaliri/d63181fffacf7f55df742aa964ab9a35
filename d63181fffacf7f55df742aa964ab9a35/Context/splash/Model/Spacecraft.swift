@@ -13,6 +13,6 @@ struct Spacecraft {
     var durability: Int = 1
     var spped: Int = 1
     var capacity: Int = 1
-    
+    var name: String = ""
     init() {}
 }
