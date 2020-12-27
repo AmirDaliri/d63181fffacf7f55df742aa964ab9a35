@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class StationsCollectionViewCell: BaseCollectionViewCell {
 
@@ -20,6 +21,7 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var eusLabel: UILabel!
     @IBOutlet private weak var dataLabel: UILabel!
+    @IBOutlet private weak var faveButton: UIButton!
     
     // MARK: - Properties
     var stationsCollectionCellViewModel: StationsCollectionCellViewModel = StationsCollectionCellViewModel() {
@@ -28,17 +30,83 @@ class StationsCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
+    private var stationTabel: StationTabel?
+    private var stationTabelController : NSFetchedResultsController<StationTabel>!
+
     // MARK: - Private Functions
     private func updateUI() {
         nameLabel.text = stationsCollectionCellViewModel.name
         dataLabel.text = "\(stationsCollectionCellViewModel.stock)/\(stationsCollectionCellViewModel.need)"
+        fetchStationsTabel(name: stationsCollectionCellViewModel.name)
     }
     // MARK: - IBAction Method
     
     @IBAction func faveButtonTapped(_ sender: Any) {
-        NavigationManager.shared.dismissTopController(.reveal, direction: .fromBottom, data: nil)
+        addToFavorite()
     }
-    @IBAction func travelButtonTapped(_ sender: Any) {
-        NavigationManager.shared.dismissTopController()
+    
+    @IBAction func travelButtonTapped(_ sender: Any) {}
+    
+    // MARK: - coreData Method
+    
+    func addToFavorite() {
+        let tablel = StationTabel(context: context)
+        tablel.name = stationsCollectionCellViewModel.name
+        tablel.coordinateX = stationsCollectionCellViewModel.coordinateX
+        tablel.coordinateY = stationsCollectionCellViewModel.coordinateY
+        tablel.need = Int32(stationsCollectionCellViewModel.need)
+        tablel.stock = Int32(stationsCollectionCellViewModel.stock)
+        tablel.capacity = Int32(stationsCollectionCellViewModel.capacity)
+        appDelegate.saveContext()
+        faveButton.setImage(#imageLiteral(resourceName: "faved"), for: .normal)
+    }
+    
+    func fetchStationsTabel(name: String) {
+        
+        let fetchRequest :NSFetchRequest<StationTabel> = StationTabel.fetchRequest()
+        
+        let datasort = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [datasort]
+        
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        controller.delegate = self
+        self.stationTabelController = controller
+        
+        do{
+            try controller.performFetch()
+        }
+        catch{
+            let error = error as NSError
+            print(error.debugDescription)
+        }
+        
+        if let items = controller.fetchedObjects {
+            for i in items {
+                DispatchQueue.main.async {
+                    if i.name == name {
+                        self.faveButton.setImage(#imageLiteral(resourceName: "faved"), for: .normal)
+                    } else {
+                        self.faveButton.setImage(#imageLiteral(resourceName: "unfave"), for: .normal)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MARK: - NSFetchedResultsControllerDelegate Method
+
+extension StationsCollectionViewCell: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch (type) {
+        case .delete:
+            if let station = anObject as? StationTabel {
+                if station.name == stationsCollectionCellViewModel.name {
+                    self.faveButton.setImage(#imageLiteral(resourceName: "unfave"), for: .normal)
+                }
+            }
+        default:
+            break
+        }
     }
 }

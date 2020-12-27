@@ -103,7 +103,7 @@ class StationsViewModel: BaseVM {
     
     // MARK: - Timer Method
     func startTimer() {
-        countdown = Int(10)
+        countdown = Int(50)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         timer?.fire()
     }
