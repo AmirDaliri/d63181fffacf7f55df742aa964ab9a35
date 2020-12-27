@@ -82,6 +82,7 @@
                 <outlet property="containerView" destination="aJ7-Xw-PZA" id="cuA-Nj-Z8T"/>
                 <outlet property="dataLabel" destination="bfE-zB-njR" id="O0u-Qh-Qww"/>
                 <outlet property="eusLabel" destination="Wyb-JF-eNT" id="I79-as-mjQ"/>
+                <outlet property="faveButton" destination="xTg-vQ-1F3" id="0LG-tm-Ic1"/>
                 <outlet property="nameLabel" destination="hK7-or-Ff1" id="o40-Jg-Ccz"/>
             </connections>
             <point key="canvasLocation" x="295.6521739130435" y="120.87053571428571"/>

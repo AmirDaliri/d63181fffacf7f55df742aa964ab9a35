@@ -14,7 +14,7 @@ class StationsRequest: NSObject {
     fileprivate let router = Router<ApiRouter>()
     fileprivate let networkManager = NetworkManager()
 
-    func getStationsList(_ completion: @escaping (_ games: Stations?,_ error: String?)->()){
+    func getStationsList(_ completion: @escaping (_ stations: Stations?,_ error: String?)->()){
         router.request(.getStations) { data, response, error in
             if error != nil {
                 completion(nil, "Please check your network connection.")
