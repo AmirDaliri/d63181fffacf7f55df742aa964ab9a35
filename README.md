@@ -4,9 +4,9 @@
 Run the following command to clone.
 
 ```bash
-$ git clone https://github.com/AmirDaliri/d63181fffacf7f55df742aa964ab9a35.git
-$ cd d63181fffacf7f55df742aa964ab9a35
-$ open -a Xcode d63181fffacf7f55df742aa964ab9a35.xcodeproj 
+$ git clone https://github.com/AmirDaliri/LyrebirdStudio.git
+$ cd LyrebirdStudio-main
+$ open -a Xcode LyrebirdStudio.xcodeproj 
 ```
 
 ## Tech Detail & Architectural Detail
@@ -17,7 +17,6 @@ $ open -a Xcode d63181fffacf7f55df742aa964ab9a35.xcodeproj
 - Swift Codable to implement Data models
 - XIB and @IBOutlet to implement UI
 - Encoding and data model test in Unit Testing Target
-- CoreData to implement Fave tab
-- System Colors to implement Dark Mode
-- Functional Parametric Comments.
+- Simple UI Testing
+- CoreData to implement for offline mode
 - Atomic commits and git flow to clear changes.
